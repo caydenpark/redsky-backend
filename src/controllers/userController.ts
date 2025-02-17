@@ -25,8 +25,6 @@ export const createUser: RequestHandler = async (req, res) => {
     }
 
     const newUser = {
-        // If the usersCache array is not empty, it takes the ID of the last user in the array and increments it by 1
-        // If the array is empty, it assigns an ID of 1.
         id: usersCache.length ? usersCache[usersCache.length - 1].id + 1 : 1,
         fname,
         lname,
